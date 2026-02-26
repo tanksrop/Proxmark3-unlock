@@ -1,0 +1,15 @@
+[Unit]
+Description=RFID Unlock Watcher
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/rfid/rfid-unlock.py
+Restart=always
+RestartSec=0.5
+TimeoutStopSec=5s
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="<idVendor>", ATTR{idProduct}=="<idProduct>", \
+RUN+="/bin/su -c 'systemctl --user restart rfid-unlock.service' - <username>"
